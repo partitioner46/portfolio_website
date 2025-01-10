@@ -15,33 +15,7 @@
 
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
   </head>
-  <header data-bs-theme="dark">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="container-xl">
-        <a class="navbar-brand" href="#">Sam's Webpage</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="{% url 'home:home' %}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'home:about' %}">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-disabled="true" href="{% url 'home:blog' %}">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-disabled="true" href="https://github.com/partitioner46">Github</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <body class='container-fluid bg-dark vh-100'>
+  <body class='container-fluid vh-100'>
     <!-- svgs for footers, these are referenced in the footer object -->
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="bootstrap" viewBox="0 0 118 94">
@@ -58,43 +32,60 @@
         <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
       </symbol>
     </svg>
-
-    <!-- This is to cover the space under the header-->
-    <div class='container-lg bg-primary mt-5 py-1'></div>
-
-    <div class='container-lg bg-primary'>
-      <div class='row'>
-        <div class='col'>
-          <p class='text-white'>Hello Sammybio aaaaaaaaaaaaaaaaaaaaa</p>
+    <div class='container'>
+      <div class='row px-2 py-3 mt-2'>
+        <div class='col-md-6 d-flex justify-content-md-start justify-content-center'>
+          <h3>Sam's Webpage</h3>
         </div>
-        <div class='col d-flex justify-content-end bg-secondary'>
-          <p class='text-white'>Hello Sammybio aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        <div class='col-md-6 d-flex justify-content-md-end justify-content-center'>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Github</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-    <div class='container-lg bg-primary mt-5'>
-      <p class='text-white bg-dark'>Hello World</p>
-    </div>
-
-    <!-- This the footer of the page -->
-    <footer class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-          </a>
-          <span class="text-white-50 mb-3 mb-md-0">&copy; 2024 Company, Inc</span>
+      <div class="p-5 mb-4 rounded-3">
+        <div class="container-fluid py-5">
+          <div class='row'>
+            <div class='col-lg-6'>
+              <h1 class="display-5 fw-bold">Custom jumbotron</h1>
+              <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+              <button class="btn btn-primary btn-lg" type="button">Example button</button>
+            </div>
+            <div class='col-lg-6'>
+              <img src="{% static 'img/me.png' %}" class='img-fluid'>
+            </div>
+          </div>
         </div>
+        <!-- This the footer of the page -->
+        <footer class="container fixed-bottom bg-primary">
+          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+              <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+              </a>
+              <span class="text-white-50 mb-3 mb-md-0">&copy; 2024 Company, Inc</span>
+            </div>
 
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-          <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-          <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
-        </ul>
-      </footer>
-    </footer>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+              <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+              <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+              <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+            </ul>
+          </footer>
+        </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   </body>
 </html>
