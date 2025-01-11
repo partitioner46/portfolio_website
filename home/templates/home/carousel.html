@@ -101,36 +101,29 @@
     <!-- Custom styles for this template -->
     <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
   </head>
-  <body>
-    <header data-bs-theme="dark">
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-xl">
-          <a class="navbar-brand" href="#">Sam's Webpage</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'home:home' %}">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'home:about' %}">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-disabled="true" href="{% url 'home:blog' %}">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-disabled="true" href="https://github.com/partitioner46">Github</a>
-              </li>
-            </ul>
-          </div>
+  <body class='container-fluid vh-100 p-0'>
+    <div class='container'>
+      <div class='row px-2 py-3 mt-2'>
+        <div class='col-md-6 d-flex justify-content-md-start justify-content-center'>
+          <h3>Sam's Webpage</h3>
         </div>
-      </nav>
-    </header>
-
-    <main>
-
+        <div class='col-md-6 d-flex justify-content-md-end justify-content-center'>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Blog</a>
+            </li>
+            <li class="nav-item align-content-center px-2">
+              <a class="text-body-secondary" href="https://github.com/partitioner46" title="My Github Page"><svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg></a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -259,7 +252,7 @@
         <p class="float-end"><a href="#">Back to top</a></p>
         <p>&copy; 2017–2024 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
-    </main>
+    </div>
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
   </body>
