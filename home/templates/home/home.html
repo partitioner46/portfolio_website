@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Testing Designs</title>
+    <title>Shiffy'sight</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
@@ -23,14 +23,14 @@
     <div class='container'>
       <nav class="navbar navbar-expand-lg mt-3">
         <div class='col-md-6 d-flex justify-content-md-start'>
-          <a href="{% url 'home:home' %}" style="text-decoration:none;"><h3 class='text-warning' style="font-family:'Courier New', monospace">Shiffy's Website</h3></a>
+          <a href="{% url 'home:home' %}" style="text-decoration:none;"><h3 class='text-warning' style="font-family:'Courier New', monospace">shiffy'sight</h3></a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="bi-chevron-bar-down" style="font-size: 1.5rem; color: white;"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link text-warning" style="font-family:'Courier New', monospace" aria-current="page" href="{% url 'home:home' %}">About</a>
+            <a class="nav-link text-warning" style="font-family:'Courier New', monospace" aria-current="page" href="{% url 'home:about' %}">About</a>
             <a class="nav-link text-warning" style="font-family:'Courier New', monospace" href="{% url 'home:blog' %}">Blog</a>
             <a class="nav-link text-warning" style="font-family:'Courier New', monospace" href="{% url 'home:tech' %}">Tech</a>
             <a class="nav-link text-warning" style="font-family:'Courier New', monospace" href="{% url 'home:projects' %}">Projects</a>
@@ -38,73 +38,72 @@
           </div>
         </div>
       </nav>
-    <div class="p-4 mb-4 border-bottom">
-      <div class="container-fluid py-2">
-        <div class='row'>
-          <div class='col-lg-6 align-content-center'>
-            <h1 class="display-5 text-warning text-lg-start text-center fw-bold border-bottom" style="font-family:'Courier New', monospace">Hey There!</h1>
-            <use xlink:href="bootstrap-icons.svg#heart-fill"/>
-            </svg>
-            <p class="fs-4 d-flex text-lg-start text-center text-white" style="font-family:'Courier New', monospace">Welcome to my personal website! My name is Sam but my friends call me Shiffy. This website is my sounding board for my projects, professional experiences and my latest software obessesion. Hope you find it helpful!</p>
-            <div class='container justify-content-lg-start justify-content-center d-flex px-0'>
-              <a href="{% url 'home:about' %}" class="btn btn-outline-light btn-lg d-flex justify-content-end" type="button">More About Me!</a>
+      <div class="p-4 mb-4 border-bottom">
+        <div class="container-fluid py-2">
+          <div class='row'>
+            <div class='col-lg-6 align-content-center'>
+              <h1 class="display-5 text-warning text-lg-start text-center fw-bold border-bottom" style="font-family:'Courier New', monospace">Hey There!</h1>
+              <use xlink:href="bootstrap-icons.svg#heart-fill"/>
+              <p class="fs-4 d-flex text-lg-start text-center text-white" style="font-family:'Courier New', monospace">Welcome to shiffy'sight! I'm Sam but some of my closest friends call me Shiffy. I've been working within the data engineering realm for nearly half a decade. I am using this website as my home base for projects, topics and tutorials for different technologies! Hope you find it helpful!</p>
+              <div class='container justify-content-lg-start justify-content-center d-flex px-0'>
+                <a href="{% url 'home:about' %}" class="btn btn-outline-light btn-lg d-flex justify-content-end" type="button">More About Me!</a>
+              </div>
+            </div>
+            <div class='col-lg-6'>
+              <img src="{% static 'img/laptop wave.png' %}" class='img-fluid'>
             </div>
           </div>
-          <div class='col-lg-6'>
-            <img src="{% static 'img/laptop wave.png' %}" class='img-fluid'>
-          </div>
         </div>
       </div>
-    </div>
-    <h1 class="display-5 text-center text-white" style="font-family:'Courier New', monospace">Latest Tech Stack</h2>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="d-flex justify-content-center">
-            <img src="{% static 'img/terraform-svgrepo-com.svg' %}" class='img' style="height:50%;width:50%">
+      <h1 class="display-5 text-center text-white" style="font-family:'Courier New', monospace">Latest Tech Stack</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="d-flex justify-content-center">
+              <img src="{% static 'img/terraform-svgrepo-com.svg' %}" class='img' style="height:50%;width:50%">
+            </div>
+            <h2 class="fw-normal text-warning text-center" style="font-family:'Courier New', monospace">Terraform (1.9.8)</h2>
+            <p class="text-white text-center" style="font-family:'Courier New', monospace">I relied heavily on Terraform to manage a large amount of resources across different domains! If your cloud architecture is getting messy, give me a shout!</p>
+            <p class="text-center"><a class="btn btn-outline-light btn-lg"
+              href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div class="d-flex justify-content-center">
+              <img src="{% static 'img/azure-svgrepo-com.svg' %}" class='img' style="height:50%;width:50%">
+            </div>
+            <h2 class="fw-normal text-warning text-center" style="font-family:'Courier New', monospace">Azure</h2>
+            <p class="text-white text-center" style="font-family:'Courier New', monospace">I mainly use Azure for my cloud solutions. It was introduced to me during my first internship and I have loved utilizing it for quick development.</p>
+            <p class="text-center"><a class="btn btn-outline-light btn-lg"
+              href="#">View details &raquo;</a></p>
           </div>
-          <h2 class="fw-normal text-warning text-center" style="font-family:'Courier New', monospace">Terraform (1.9.8)</h2>
-          <p class="text-white text-center" style="font-family:'Courier New', monospace">I relied heavily on Terraform to manage a large amount of resources across different domains! If your cloud architecture is getting messy, give me a shout!</p>
-          <p class="text-center"><a class="btn btn-outline-light btn-lg"
-            href="#">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <div class="d-flex justify-content-center">
-            <img src="{% static 'img/azure-svgrepo-com.svg' %}" class='img' style="height:50%;width:50%">
+          <div class="col-lg-4">
+            <div class="d-flex justify-content-center">
+              <img src="{% static 'img/databricks-svgrepo-com.svg' %}" class='img' style="height:50%;width:50%">
+            </div>
+            <h2 class="fw-normal text-warning text-center" style="font-family:'Courier New', monospace">Databricks</h2>
+            <p class="text-white text-center" style="font-family:'Courier New', monospace">Databricks was a new addition to my arsenal in 2022. I mainly use it for ETL pipeline development on distributed computing networks. Unity Catalog has been a huge game changer as well!</p>
+            <p class="text-center"><a class="btn btn-outline-light btn-lg"
+              href="#">View details &raquo;</a></p>
           </div>
-          <h2 class="fw-normal text-warning text-center" style="font-family:'Courier New', monospace">Azure</h2>
-          <p class="text-white text-center" style="font-family:'Courier New', monospace">I mainly use Azure for my cloud solutions. It was introduced to me during my first internship and I have loved utilizing it for quick development.</p>
-          <p class="text-center"><a class="btn btn-outline-light btn-lg"
-            href="#">View details &raquo;</a></p>
         </div>
-        <div class="col-lg-4">
-          <div class="d-flex justify-content-center">
-            <img src="{% static 'img/databricks-svgrepo-com.svg' %}" class='img' style="height:50%;width:50%">
-          </div>
-          <h2 class="fw-normal text-warning text-center" style="font-family:'Courier New', monospace">Databricks</h2>
-          <p class="text-white text-center" style="font-family:'Courier New', monospace">Databricks was a new addition to my arsenal in 2022. I mainly use it for ETL pipeline development on distributed computing networks. Unity Catalog has been a huge game changer as well!</p>
-          <p class="text-center"><a class="btn btn-outline-light btn-lg"
-            href="#">View details &raquo;</a></p>
-        </div>
-      </div>
-      <!-- This the footer of the page -->
-      <footer class="container">
-        <footer class="d-flex row flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-6 d-flex align-items-center justify-content-md-start justify-content-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-              <i class="bi-bootstrap" style="font-size: 1.5rem; color: black;"></i>
-            </a>
-            <span class="text-white-50 mb-3 mb-md-0">&copy; 2024 Company, Inc</span>
-          </div>
+        <!-- This the footer of the page -->
+        <footer class="container">
+          <footer class="d-flex row flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-6 d-flex align-items-center justify-content-md-start justify-content-center">
+              <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <i class="bi-bootstrap" style="font-size: 1.5rem; color: black;"></i>
+              </a>
+              <span class="text-white-50 mb-3 mb-md-0">&copy; 2024 Company, Inc</span>
+            </div>
 
-          <ul class="nav col-md-6 justify-content-md-end justify-content-center list-unstyled d-flex">
-            <li><a class="text-body-secondary" href="#"><i class="bi-twitter" style="font-size: 1.5rem; color: black;"></i></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi-instagram" style="font-size: 1.5rem; color: black;"></i></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi-facebook" style="font-size: 1.5rem; color: black;"></i></a></li>
-          </ul>
+            <ul class="nav col-md-6 justify-content-md-end justify-content-center list-unstyled d-flex">
+              <li><a class="text-body-secondary" href="#"><i class="bi-twitter" style="font-size: 1.5rem; color: black;"></i></a></li>
+              <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi-instagram" style="font-size: 1.5rem; color: black;"></i></a></li>
+              <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi-facebook" style="font-size: 1.5rem; color: black;"></i></a></li>
+            </ul>
+          </footer>
         </footer>
-      </footer>
 
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   </body>
 </html>

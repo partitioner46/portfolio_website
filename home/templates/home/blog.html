@@ -20,45 +20,43 @@
 
   <!-- Heyo! Yes this is my code in the front-end. Looks like you know your way around the browser so don't go too harsh on me when looking at my html/css. I used bootstrap 5 to make this since I am mainly a backend/data engineeer -->
   <body class='container-fluid bg-dark vh-100'>
-   <div class='container'>
+    <div class='container'>
       <nav class="navbar navbar-expand-lg mt-3">
-        <div class="container-fluid">
-          <div class='col-lg-6 d-flex justify-content-lg-start justify-content-center'>
-            <a href="{% url 'home:home' %}" style="text-decoration:none;"><h3 class='text-warning' style="font-family:'Courier New', monospace"><i class="bi-activity" style="font-size: 1.5rem; color: white;"></i>Shiffy's Website<i class="bi-activity" style="font-size: 1.5rem; color: white;"></i></h3></a>
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link text-warning" style="font-family:'Courier New', monospace" aria-current="page" href="{% url 'home:home' %}">About</a>
-              <a class="nav-link text-warning" style="font-family:'Courier New', monospace" href="{% url 'home:blog' %}">Blog</a>
-              <a class="nav-link text-warning" style="font-family:'Courier New', monospace" href="{% url 'home:tech' %}">Tech</a>
-              <a class="nav-link text-warning" style="font-family:'Courier New', monospace" href="{% url 'home:projects' %}">Projects</a>
-              <a class="text-body-secondary" href="https://github.com/partitioner46" title="My Github Page"><i class="bi-github" style="font-size: 1.5rem; color: white;"></i></a>
-            </div>
+        <div class='col-md-6 d-flex justify-content-md-start'>
+          <a href="{% url 'home:home' %}" style="text-decoration:none;"><h3 class='text-warning' style="font-family:'Courier New', monospace">Shiffy's Website</h3></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="bi-chevron-bar-down" style="font-size: 1.5rem; color: white;"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link text-warning" style="font-family:'Courier New', monospace" aria-current="page" href="{% url 'home:about' %}">About</a>
+            <a class="nav-link text-warning" style="font-family:'Courier New', monospace" href="{% url 'home:blog' %}">Blog</a>
+            <a class="nav-link text-warning" style="font-family:'Courier New', monospace" href="{% url 'home:tech' %}">Tech</a>
+            <a class="nav-link text-warning" style="font-family:'Courier New', monospace" href="{% url 'home:projects' %}">Projects</a>
+            <a class="text-body-secondary" href="https://github.com/partitioner46" title="My Github Page"><i class="bi-github" style="font-size: 1.5rem; color: white;"></i></a>
           </div>
         </div>
       </nav>
-      
-      <div class="p-4 mb-4 border-bottom">
-        <div class="container-fluid py-2">
-          <div class='row'>
-            <div class='col-lg-6 align-content-center'>
-              <h1 class="display-5 text-warning text-lg-start text-center fw-bold border-bottom" style="font-family:'Courier New', monospace">Hey There!</h1>
-              <use xlink:href="bootstrap-icons.svg#heart-fill"/>
-              <p class="fs-4 d-flex text-lg-start text-center text-white" style="font-family:'Courier New', monospace">Welcome to my personal website! My name is Sam but my friends call me Shiffy. This website is my sounding board for my projects, professional experiences and my latest software obessesion. Hope you find it helpful!</p>
-              <div class='container justify-content-lg-start justify-content-center d-flex px-0'>
-                <a href="{% url 'home:about' %}" class="btn btn-outline-light btn-lg d-flex justify-content-end" type="button">More About Me!</a>
-              </div>
+    <div class="p-4 mb-4 border-bottom">
+      <div class="container-fluid py-2">
+        <div class='row'>
+          <div class='col-lg-6 align-content-center'>
+            <h1 class="display-5 text-warning text-lg-start text-center fw-bold border-bottom" style="font-family:'Courier New', monospace">Hey There!</h1>
+            <use xlink:href="bootstrap-icons.svg#heart-fill"/>
+            </svg>
+            <p class="fs-4 d-flex text-lg-start text-center text-white" style="font-family:'Courier New', monospace">Welcome to my personal website! My name is Sam but my friends call me Shiffy. This website is my sounding board for my projects, professional experiences and my latest software obessesion. Hope you find it helpful!</p>
+            <div class='container justify-content-lg-start justify-content-center d-flex px-0'>
+              <a href="{% url 'home:about' %}" class="btn btn-outline-light btn-lg d-flex justify-content-end" type="button">More About Me!</a>
             </div>
-            <div class='col-lg-6'>
-              <img src="{% static 'img/laptop wave.png' %}" class='img-fluid'>
-            </div>
+          </div>
+          <div class='col-lg-6'>
+            <img src="{% static 'img/laptop wave.png' %}" class='img-fluid'>
           </div>
         </div>
       </div>
-      <h1 class="display-5 text-center text-white" style="font-family:'Courier New', monospace">Latest Tech Stack</h2>
+    </div>
+    <h1 class="display-5 text-center text-white" style="font-family:'Courier New', monospace">Latest Tech Stack</h2>
       <div class="row">
         <div class="col-lg-4">
           <div class="d-flex justify-content-center">
@@ -83,25 +81,25 @@
             <img src="{% static 'img/databricks-svgrepo-com.svg' %}" class='img' style="height:50%;width:50%">
           </div>
           <h2 class="fw-normal text-warning text-center" style="font-family:'Courier New', monospace">Databricks</h2>
-          <p class="text-white text-center" style="font-family:'Courier New', monospace">Databricks was a new addition to my aresenal in 2022. I mainly use it for ETL pipeline development on distributed computing networks. Unity Catalog has been a huge game changer as well!</p>
+          <p class="text-white text-center" style="font-family:'Courier New', monospace">Databricks was a new addition to my arsenal in 2022. I mainly use it for ETL pipeline development on distributed computing networks. Unity Catalog has been a huge game changer as well!</p>
           <p class="text-center"><a class="btn btn-outline-light btn-lg"
             href="#">View details &raquo;</a></p>
         </div>
-     </div>
+      </div>
       <!-- This the footer of the page -->
       <footer class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
+        <footer class="d-flex row flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-6 d-flex align-items-center justify-content-md-start justify-content-center">
             <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+              <i class="bi-bootstrap" style="font-size: 1.5rem; color: black;"></i>
             </a>
             <span class="text-white-50 mb-3 mb-md-0">&copy; 2024 Company, Inc</span>
           </div>
 
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+          <ul class="nav col-md-6 justify-content-md-end justify-content-center list-unstyled d-flex">
+            <li><a class="text-body-secondary" href="#"><i class="bi-twitter" style="font-size: 1.5rem; color: black;"></i></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi-instagram" style="font-size: 1.5rem; color: black;"></i></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><i class="bi-facebook" style="font-size: 1.5rem; color: black;"></i></a></li>
           </ul>
         </footer>
       </footer>
